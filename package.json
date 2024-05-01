@@ -1,0 +1,15 @@
+{
+  "name": "triffnix",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start-server": "cd pocketbase && pocketbase serve",
+    "start-client": "cd frontend && yarn dev",
+    "start": "concurrently --names \"BACKEND,FRONTEND\" -c \"bgBlue.bold,bgMagenta.bold\" \"yarn run start-server\" \"yarn run start-client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
